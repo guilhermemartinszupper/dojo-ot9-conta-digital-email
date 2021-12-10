@@ -27,5 +27,4 @@ public class EventoDeTransacao {
 	public String getIdMensagem() {
 		return idMensagem;
 	}
-
 }

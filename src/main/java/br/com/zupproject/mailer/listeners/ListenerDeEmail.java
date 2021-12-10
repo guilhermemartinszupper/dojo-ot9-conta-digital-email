@@ -21,12 +21,10 @@ public class ListenerDeEmail {
 
 	@Autowired
 	private EmailServiceImplementation mailer;
+	private final Logger logger = LoggerFactory.getLogger(ListenerDeEmail.class);
 
 	@KafkaListener(topics = "${spring.kafka.topic.transacao}")
 	public void ouvir(EventoDeTransacao evento) {
-
-		final Logger logger = LoggerFactory.getLogger(ListenerDeEmail.class);
-
 		try {
 			logger.info("Recebido uma mensagem do kafka para o evento de id " + evento.getIdMensagem());
 

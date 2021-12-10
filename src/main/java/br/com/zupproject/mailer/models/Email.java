@@ -62,8 +62,4 @@ public class Email {
 	public String getIdMensagem() {
 		return idMensagem;
 	}
-	
-	/*
-	 * TODO Pensar em maneiras de controlar o envio de emails duplicados
-	 */
 }
